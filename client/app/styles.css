@@ -1,0 +1,106 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+  font-size: 14px;
+}
+
+button:focus,
+a:focus {
+  outline: none;
+}
+
+div.react-datepicker-wrapper,
+div.react-datepicker__input-container {
+  display: block;
+}
+.select-none .active {
+  color: #fff;
+  background-color: #43414d;
+}
+
+.center {
+  text-align: center;
+}
+
+.inputbox {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.875rem;
+  background: #ffffff;
+  border: 1px solid #d4d9df;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+.inputbox:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.inputbox.bg-white {
+  background: #ffffff;
+}
+select.inputbox {
+  height: 36px;
+}
+.label {
+  font-weight: bold;
+  color: #43414d;
+}
+
+.flex.relative > .m-auto.inputbox {
+  min-width: 300px;
+}
+
+div#component-error-text {
+  color: #ff3b30;
+  margin: 0;
+  font-size: 0.75rem;
+  text-align: left;
+  margin-top: 8px;
+  min-height: 1em;
+}
+
+.waft-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    #1c2260 0%,
+    #eceff3 25%,
+    #1c2260 50%,
+    #eceff3 75%,
+    #1c2260 100%
+  );
+  width: 100%;
+  background-size: 200% auto;
+  background-position: 0 100%;
+  animation: gradient 2s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.ease-in-out {
+  transition: all 0.2s ease-in-out;
+}
+.rotate-90 {
+  transform: rotate(-90deg);
+}

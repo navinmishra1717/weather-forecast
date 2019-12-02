@@ -1,0 +1,3 @@
+export const LOAD_FORECAST_REQUEST = 'app/ForecastPage/LOAD_FORECAST_REQUEST';
+export const LOAD_FORECAST_SUCCESS = 'app/ForecastPage/LOAD_FORECAST_SUCCESS';
+export const LOAD_FORECAST_FAILURE = 'app/ForecastPage/LOAD_FORECAST_FAILURE';
