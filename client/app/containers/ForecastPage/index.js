@@ -15,6 +15,7 @@ import moment from 'moment';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './index.css';
 
 //@material components
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -218,7 +219,37 @@ class ForecastPage extends React.Component {
       infinite: true,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            arrows: false,
+            dots: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            dots: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            dots: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
     };
 
     return loading && loading == true ? (

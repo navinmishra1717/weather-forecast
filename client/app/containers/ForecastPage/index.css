@@ -78,16 +78,9 @@
 .slick-arrow {
   position: absolute;
 }
-.slick-prev {
-  z-index: 1;
-  left: 40px !important;
-}
-.slick-next {
-  z-index: 1;
-  right: 40px !important;
-}
 
 .slick-prev:before,
 .slick-next:before {
   font-size: 40px;
+  color: #000000;
 }
