@@ -182,6 +182,12 @@ class ForecastPage extends React.Component {
     }
   };
 
+  // getAverageHumidity = day => {
+  //   let datas = [];
+  //   day.length && day.map(each => datas.push(each.main.humidity));
+  //   return datas.reduce((a, b) => a + b, 0) / 8;
+  // };
+
   render() {
     const {
       forecastData: { list, city },
@@ -259,7 +265,7 @@ class ForecastPage extends React.Component {
                       color="textSecondary"
                       gutterBottom
                     >
-                      Average Temp: {this.getAverageTemp(days[each])}
+                      Avg Temp: {this.getAverageTemp(days[each])}
                       {this.state.fahrenheit
                         ? 'F'
                         : this.state.celcius
@@ -270,6 +276,13 @@ class ForecastPage extends React.Component {
                       {moment(
                         days && days[each][0] && days[each][0].dt_txt,
                       ).format('ll')}
+                      <br />
+                      Weather:{' '}
+                      {days &&
+                        days[each][0] &&
+                        days[each][0].weather[0].description}
+                      <br />
+                      {/* Avg Humidity: {this.getAverageHumidity(days[each])} */}
                     </Typography>
                   </CardContent>
                 </Card>

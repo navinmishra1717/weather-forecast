@@ -11,11 +11,11 @@ export const makeSelectLocation = () =>
 
 const selectGlobal = state => state.global || initialState;
 
-export const makeSelectLoading = () =>
-  createSelector(
-    selectGlobal,
-    state => state.loading,
-  );
+// export const makeSelectLoading = () =>
+//   createSelector(
+//     selectGlobal,
+//     state => state.loading,
+//   );
 
 export const makeSelectNotifications = () =>
   createSelector(
